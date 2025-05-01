@@ -52,39 +52,39 @@ A CI/CD tool used to automate testing and deployment workflows directly from the
 ## Database Design
 
 ### Users
-- `id` (UUID)
-- `name`
-- `email`
-- `password_hash`
-- `is_host` (Boolean)
+- id
+- name
+- email
+- password
+  
 
 ### Properties
-- `id`
-- `title`
-- `description`
-- `location`
-- `owner_id` (ForeignKey to Users)
+- id
+- title
+- description
+- location
+- owner_id
 
 ### Bookings
-- `id`
-- `user_id` (ForeignKey to Users)
-- `property_id` (ForeignKey to Properties)
-- `start_date`
-- `end_date`
+- id
+- user_id
+- property_id
+- start_date
+- end_date
 
 ### Reviews
-- `id`
-- `booking_id` (ForeignKey to Bookings)
-- `rating`
-- `comment`
-- `created_at`
+- id
+- booking_id
+- rating
+- comment
+  
 
 ### Payments
-- `id`
-- `booking_id` (ForeignKey to Bookings)
-- `amount`
-- `status`
-- `payment_date`
+- id
+- booking_id
+- amount
+  status
+- payment_date
 
 **Entity Relationships:**
 - A user can own multiple properties.
@@ -93,7 +93,7 @@ A CI/CD tool used to automate testing and deployment workflows directly from the
 - Each booking can have one review.
 - Each booking corresponds to a payment.
 
----
+
 
 ## Feature Breakdown
 
